@@ -25,7 +25,7 @@ public class TrackController {
     }
 
 
-    @PostMapping("insert")
+    @PostMapping("track")
     public ResponseEntity<?> saveTrack(@RequestBody Track track){
         ResponseEntity responseEntity;
         try{
@@ -38,7 +38,7 @@ public class TrackController {
         return responseEntity;
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("track/{id}")
     public ResponseEntity<?> updateTrack(@PathVariable("id") int id, @RequestBody String comment){
         ResponseEntity responseEntity;
         try{
@@ -51,7 +51,7 @@ public class TrackController {
         return responseEntity;
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("track/{id}")
     public ResponseEntity<?> deleteTrack(@PathVariable("id") int id){
         ResponseEntity responseEntity;
         try{
@@ -77,7 +77,7 @@ public class TrackController {
         return listResponseEntity;
     }
 
-    @GetMapping("trackName/{name}")
+    @GetMapping("track/{name}")
     public ResponseEntity<?> trackName(@PathVariable("name") String name){
         ResponseEntity responseEntity;
         try{
